@@ -22,16 +22,3 @@
 ![Gradle](https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
-**Como as peças se conectam**
-
-```mermaid
-flowchart LR
-    U(["👤 Usuário"]) --> F["Next.js + React<br/>TypeScript · Tailwind"]
-    F --> A{"Camada de API"}
-    A -->|"Route Handlers"| S["Supabase<br/>Auth · Storage · RLS"]
-    A -->|"REST"| J["Spring Boot<br/>Java · JPA"]
-    S --> DB[("PostgreSQL")]
-    J --> DB
-    F -.->|"ORM"| P["Prisma"]
-    P -.-> DB
-```
